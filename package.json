@@ -1,0 +1,54 @@
+{
+  "name": "task-managment-system",
+  "version": "1.0.0",
+  "description": "Build a backend service for a Task Management System that allows users to create, manage, and prioritize tasks efficiently. The service should support scheduling tasks, assigning priorities, and reordering tasks based on their priority.",
+  "main": "index.ts",
+  "type": "module",
+  "jest": {
+    "transform": {}
+  },
+  "scripts": {
+    "lint": "eslint 'src/**/*.{js,ts,jsx,tsx}' --fix",
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "dev": "nodemon --exec ts-node index.ts",
+    "start": "ts-node index.ts",
+    "migrate": "npx prisma migrate dev --name init",
+    "generate": "npx prisma generate",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urvil5256/task-managment-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/urvil5256/task-managment-system/issues"
+  },
+  "homepage": "https://github.com/urvil5256/task-managment-system#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.22.0",
+    "express": "^4.21.2",
+    "globals": "^16.0.0",
+    "nodemon": "^3.1.9",
+    "prisma": "^6.5.0",
+    "ts-jest": "^29.2.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.5.0",
+    "cors": "^2.8.5",
+    "pg": "^8.14.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  }
+}

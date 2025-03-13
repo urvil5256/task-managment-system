@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  database:
+    image: postgres
+    container_name: my_postgres
+    environment:
+      POSTGRES_USER: urvil
+      POSTGRES_PASSWORD: Test1234
+      POSTGRES_DB: TaskManagementSystem
+    ports:
+      - "5432:5432"
+    restart: always
+
+  app:
+    build: .
+    container_name: my-node-app
+    depends_on:
+      - database
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://urvil:Test1234@localhost:5432/TaskManagementSystem?schema=public"

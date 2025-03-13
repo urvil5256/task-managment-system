@@ -1,0 +1,9 @@
+node_modules
+
+# Build file
+build
+dist
+
+# dotenv environment variables file
+.env
+.env.sample
