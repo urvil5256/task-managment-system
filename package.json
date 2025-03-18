@@ -5,10 +5,12 @@
   "main": "index.ts",
   "type": "module",
   "jest": {
-    "transform": {}
+    "testMatch": [
+      "**/src/test/apiTesting.ts"
+    ]
   },
   "scripts": {
-    "lint": "eslint 'src/**/*.{js,ts,jsx,tsx}' --fix",
+    "lint": "eslint \"src/**/*.{js,ts,jsx,tsx}\" --fix",
     "build": "rm -rf dist && tsc -p tsconfig.json",
     "dev": "nodemon --exec ts-node index.ts",
     "start": "ts-node index.ts",
@@ -29,8 +31,10 @@
   "homepage": "https://github.com/urvil5256/task-managment-system#readme",
   "devDependencies": {
     "@eslint/js": "^9.22.0",
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/jest": "^29.5.14",
+    "@types/supertest": "^6.0.2",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.8",
     "dotenv": "^16.4.7",
@@ -39,6 +43,7 @@
     "globals": "^16.0.0",
     "nodemon": "^3.1.9",
     "prisma": "^6.5.0",
+    "supertest": "^7.0.0",
     "ts-jest": "^29.2.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2",
@@ -49,6 +54,7 @@
     "cors": "^2.8.5",
     "pg": "^8.14.0",
     "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1"
+    "swagger-ui-express": "^5.0.1",
+    "zod": "^3.24.2"
   }
 }

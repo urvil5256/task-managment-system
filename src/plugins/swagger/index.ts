@@ -13,7 +13,7 @@ const swaggerPlugins = () => {
         version: "8.15.0",
       },
     },
-    apis: ["./serc/routes/*.ts"],
+    apis: ["src/routes/task/index.ts"],
   };
 
   const swaggerSpec = swaggerJsdoc(swaggerOptions);

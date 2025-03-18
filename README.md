@@ -70,8 +70,5 @@ This is node project structure which are located `./src`. The packages are:
 - `services` - contains functions which are perform database queries to insert, update, delete and fetch the data.
 
 ## Remaining Points:
-
-- How to test the APIs
-- Write unit tests for: API endpoints. 
-- Validations
+- Facing issue while running test cases.
 
